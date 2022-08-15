@@ -16,7 +16,7 @@ const jump = () => {
 const loop = setInterval(() => {
 
     console.log('lup')
-    
+
     const pipePosition = document.querySelector('.pipe').offsetLeft;
     const marioPosition = +window.getComputedStyle(document.querySelector('.mario')).bottom.replace('px', '');
 
@@ -32,6 +32,8 @@ const loop = setInterval(() => {
         document.querySelector('.mario').src = './assets/images/game-over.png';
         document.querySelector('.mario').style.width = '75px';
         document.querySelector('.mario').style.marginLeft = '50px';
+
+        clearInterval(loop);
 
     }
 }, 10)
